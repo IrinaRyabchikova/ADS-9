@@ -3,7 +3,7 @@
 #define INCLUDE_BST_H_
 template <typename T>
 class BST {
-   private:
+  private:
     struct Node {
         T value;
         int count;
@@ -14,7 +14,7 @@ class BST {
     int depthTree;
     int searchNode(Node*, const T&);
 
-   public:
+  public:
     BST():root(nullptr), depthTree(-1) {}
     void add(const T&);
     int search(const T&);
@@ -22,7 +22,7 @@ class BST {
 };
 
 template <typename T>
-BST<T>::Node* BST<T>:: addNode(Node* root, const T& value, int depth) {
+typename BST<T>::Node* BST<T>:: addNode(Node* root, const T& value, int depth) {
   if (root == nullptr) {
     root = new Node;
     root->value = value;
