@@ -12,8 +12,7 @@ BST<std::string> makeTree(const char* filename) {
     std::cout << "File error!" << std::endl;
     return tree;
   }
-  int count=0;
-  while(!file.eof()) {
+  while (!file.eof()) {
     char ch;
     std::string str;
     while (file.get(ch)) {
